@@ -44,8 +44,8 @@ flexibility(document.documentElement);
 /* Run FooBox FREE (v2.7.16) */
 var FOOBOX = window.FOOBOX = {
 	ready: true,
-	disableOthers: false,
-	o: {wordpress: { enabled: true }, countMessage:'image %index of %total', excludes:'.fbx-link,.nofoobox,.nolightbox,a[href*="pinterest.com/pin/create/button/"]', affiliate : { enabled: false }},
+	disableOthers: true,
+	o: {wordpress: { enabled: true }, excludes:'.fbx-link,.nofoobox,.nolightbox,a[href*="pinterest.com/pin/create/button/"]', affiliate : { enabled: false }, error: "Could not load the item"},
 	selectors: [
 		".foogallery-container.foogallery-lightbox-foobox", ".foogallery-container.foogallery-lightbox-foobox-free", ".gallery", ".wp-block-gallery", ".wp-caption", ".wp-block-image", "a:has(img[class*=wp-image-])", ".foobox"
 	],
@@ -294,5 +294,12 @@ var FooGallery_il8n = [];
 			<script>
 			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
 			</script>
-				</body>
+						<script type="text/javascript">
+				jQuery.fn.prettyPhoto   = function () { return this; };
+				jQuery.fn.fancybox      = function () { return this; };
+				jQuery.fn.fancyZoom     = function () { return this; };
+				jQuery.fn.colorbox      = function () { return this; };
+				jQuery.fn.magnificPopup = function () { return this; };
+			</script>
+			</body>
 </html>
